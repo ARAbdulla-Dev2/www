@@ -6,6 +6,10 @@
             overflow-x: hidden;
             font-family: 'Segoe UI', sans-serif;
             color: #c2e9ff;
+            -webkit-user-select: none; /* Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
         }
 
         /* Space background elements */
@@ -188,7 +192,8 @@
             transition: background 0.4s ease, transform 0.3s;
             z-index: 2;
             position: relative;
-            margin: 10px 5px;
+            margin: 10px 15px;
+            cursor: pointer;
         }
         
         .gradient-button:hover {
@@ -235,6 +240,7 @@
             padding: 8px 15px;
             border-radius: 20px;
             transition: background 0.3s, color 0.3s;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
@@ -361,7 +367,7 @@
         }
 
         .plan-card.popular::before {
-            content: "Most Popular";
+            content: "\00a0\00a0\00a0\00a0\00a0Most Popular";
             position: absolute;
             top: 15px;
             right: -35px;
@@ -473,6 +479,7 @@
 
         .endpoint-url {
             font-family: monospace;
+            font-size: 1.2em;
             background: rgba(0, 0, 0, 0.3);
             padding: 8px 12px;
             border-radius: 5px;
@@ -526,7 +533,7 @@
             border: 1px solid rgba(79, 172, 254, 0.3);
             border-radius: 5px;
             color: white;
-            font-family: 'Segoe UI', sans-serif;
+            resize: none;
         }
 
         .form-control:focus {
@@ -589,13 +596,13 @@
             margin-bottom: 30px;
         }
 
-        .footer-links a {
+        .footer-links a, .copyline a {
             color: #c2e9ff;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover, .copyline a:hover {
             color: #4facfe;
         }
 
@@ -659,3 +666,28 @@
         ::-webkit-scrollbar-thumb {
             background: #FF0000;
         }
+
+        .outline {
+            outline: 2px solid #4facfe;
+            outline-offset: -2px;
+            background: transparent;
+        }
+
+        .outline:hover {
+            outline: 0px;
+            outline-offset: 0px;
+        }
+
+        a{
+            cursor: pointer;
+        }
+
+        input, textarea{
+            cursor: text;
+            font-size: 1em;
+        }
+
+        section {
+            scroll-margin-top: -80px;
+          }
+          
